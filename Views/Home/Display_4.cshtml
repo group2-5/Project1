@@ -1,0 +1,11 @@
+﻿@model IEnumerable<FormInfo>
+
+<h3>Set Appointments</h3>
+
+<ul>
+    @foreach (var x in Model)
+    {
+        <li>@x.NameOfGroup, @x.SizeOfGroup, @x.Email, @x.Phone</li>
+    }
+    
+</ul>
