@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Project1.Models
-{
+{//This is a test
     //These are the properties for Sign Up Form
     public class FormInfo
     {
