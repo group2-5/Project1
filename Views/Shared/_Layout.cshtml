@@ -9,10 +9,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="bg-secondary text-white">
         <h2 class="display-4">Layton Utah Temple Tours</h2>
     </header>
-    <br />
+    <nav class="navbar navbar-light bg-light">
+        <a asp-action="Index" class="navbar-brand">Home</a>
+        <a asp-action="SignUp_2" class="navbar-brand">Sign-Up</a>
+        <a asp-action="Display_4" class="navbar-brand">View Scheduled Appointments</a>
+    </nav>
 
     <div>
         @RenderBody()
