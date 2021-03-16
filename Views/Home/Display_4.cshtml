@@ -1,11 +1,23 @@
 ﻿@model IEnumerable<FormInfo>
 
-<h3>Set Appointments</h3>
+<h3>Scheduled Appointments</h3>
 
-<ul>
-    @foreach (var x in Model)
-    {
-        <li>@x.NameOfGroup, @x.SizeOfGroup, @x.Email, @x.Phone</li>
-    }
-    
-</ul>
+<!--Create a table to iterate through the scheduled appointments-->
+<table class="table table-bordered">
+    <!--Table Headers-->
+    <thead class="thead-light">
+        <tr><th>Group Name</th><th>Group Size</th><th>Email</th><th>Phone #</th></tr>
+    </thead>
+    <tbody>
+        <!--Gets every instance within the List-->
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.NameOfGroup</td>
+                <td>@x.SizeOfGroup</td>
+                <td>@x.Email</td>
+                <td>@x.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table> 
