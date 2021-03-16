@@ -13,7 +13,7 @@ namespace Project1.Models
         //Inherients from the base option
         public FormInfoContext (DbContextOptions<FormInfoContext> options) : base (options)
         {
-
+            Database.EnsureCreated();
         }
 
         //Import a table, and the type is FormInfo

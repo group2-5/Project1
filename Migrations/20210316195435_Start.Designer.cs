@@ -9,7 +9,7 @@ using Project1.Models;
 namespace Project1.Migrations
 {
     [DbContext(typeof(FormInfoContext))]
-    [Migration("20210316190616_Start")]
+    [Migration("20210316195435_Start")]
     partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
