@@ -1,23 +1,40 @@
 ﻿@model IEnumerable<FormInfo>
 
-<h3>Scheduled Appointments</h3>
+<br />
 
-<!--Create a table to iterate through the scheduled appointments-->
-<table class="table table-bordered">
-    <!--Table Headers-->
-    <thead class="thead-light">
-        <tr><th>Group Name</th><th>Group Size</th><th>Email</th><th>Phone #</th></tr>
-    </thead>
-    <tbody>
-        <!--Gets every instance within the List-->
-        @foreach (var x in Model)
-        {
-            <tr>
-                <td>@x.NameOfGroup</td>
-                <td>@x.SizeOfGroup</td>
-                <td>@x.Email</td>
-                <td>@x.Phone</td>
-            </tr>
-        }
-    </tbody>
-</table> 
+<div class="row m-2">
+
+    <div class="col-3">
+        
+
+        <h3>Scheduled Appointments</h3>
+
+        <br />
+
+        <p>To the right you'll find the appointments scheduled through our website. If there are any questions or conflicts, reach out using
+        the contact methods listed.</p>
+    </div>
+
+    <div class="col-9">
+        <!--Create a table to iterate through the scheduled appointments-->
+        <table class="table table-bordered">
+            <!--Table Headers-->
+            <thead class="thead-light">
+                <tr><th>Group Name</th><th>Group Size</th><th>Email</th><th>Phone #</th></tr>
+            </thead>
+            <tbody>
+                <!--Gets every instance within the List-->
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.NameOfGroup</td>
+                        <td>@x.SizeOfGroup</td>
+                        <td>@x.Email</td>
+                        <td>@x.Phone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
