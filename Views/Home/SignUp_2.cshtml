@@ -7,10 +7,11 @@
         <th>Date</th>
         <th></th>
     </tr>
-
+    <!--display a time slot for each time slot in the db, and make it a link with a hidden value to pass to the next view-->
     @foreach (TimeInfo time in Model)
     {
         <tr>
+            <!--display the actual time from the time object-->
             <td><p>@time.Time</p></td>
             <td>
                 <form method="post" asp-action="SignUp_2">

@@ -2,7 +2,7 @@
     selected timeslot-->
 
 @model FormInfo
-
+<!--use viewbag to store the time object to pass to the form-->
 <p>@ViewBag.TimeInfo.Time</p>
 
 <form  method="post" asp-action="Form_3">
@@ -19,6 +19,7 @@
     <label asp-for="Phone">Phone Number (optional)</label>
     <input asp-for="Phone"/>
     <br />
+    <!--display relevant error messages, if any-->
     <div asp-validation-summary="All"></div>
 
     <button type="submit">Submit</button>
