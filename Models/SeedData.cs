@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Project1
 {
+    //Data to autopopulate our times stuff
     public class SeedData
     {
         public static void EnsurePopulated(IApplicationBuilder application)
