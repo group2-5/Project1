@@ -1,17 +1,19 @@
-﻿
-@model List<string>
+﻿@model List<string>
 
+
+<!--Set up a nice index page that contains the drawing of the temple and a link to sign-up for a time-->
 <div class="row m-2">
+    <!--Use col sizing to make everything look nice-->
     <div class="col-8">
-        <img src="~/img/LaytonTemple.jpg" class="rounded mx-auto d-block" />
+        <!--Bring in image-->
+        <img src="~/img/LaytonTemple.jpg" class="rounded mx-auto d-block img-fluid" />
     </div>
     <div class="jumbotron col-4">
         <h1 class="display-4">Hello, world!</h1>
         <p class="lead">Thank you for joining us in learning about the House of the Lord</p>
         <hr class="my-4">
         <p>Below, you can sign-up for a tour</p>
+        <!--Use asp-action to allow button to send users to sign-up page-->
         <a asp-action="SignUp_2" class="btn btn-primary btn-lg" role="button">Sign-up</a>
     </div>
-    <br />
-
 </div>
