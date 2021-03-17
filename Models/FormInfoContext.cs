@@ -13,7 +13,7 @@ namespace Project1.Models
         //Inherients from the base option
         public FormInfoContext (DbContextOptions<FormInfoContext> options) : base (options)
         {
-            Database.EnsureCreated();
+            
         }
 
         //Import a table, and the type is FormInfo
@@ -25,7 +25,8 @@ namespace Project1.Models
             modelBuilder.Entity<FormInfo>()
                 .HasOne(t => t.TimeInfo)
                 .WithOne(f => f.FormInfo)
-                .HasForeignKey<TimeInfo>(f => f.TourId);
+                .HasForeignKey<TimeInfo>(f => f.TourId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
     }

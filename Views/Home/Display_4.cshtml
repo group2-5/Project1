@@ -20,18 +20,19 @@
         <table class="table table-bordered">
             <!--Table Headers-->
             <thead class="thead-light">
-                <tr><th>Group Name</th><th>Group Size</th><th>Email</th><th>Phone #</th></tr>
+                <tr><th>Group Name</th><th>Group Size</th><th>Date/Time</th><th>Email</th><th>Phone #</th></tr>
             </thead>
             <tbody>
                 <!--Gets every instance within the List-->
                 @foreach (var x in Model)
                 {
-                    <tr>
-                        <td>@x.NameOfGroup</td>
-                        <td>@x.SizeOfGroup</td>
-                        <td>@x.Email</td>
-                        <td>@x.Phone</td>
-                    </tr>
+                <tr>
+                    <td>@x.NameOfGroup</td>
+                    <td>@x.SizeOfGroup</td>
+                    <td>@x.Email</td>
+                    <td>@x.Phone</td>
+                    @*<td>@x.TimeInfo.Time</td>*@
+                </tr>
                 }
             </tbody>
         </table>

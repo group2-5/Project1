@@ -50,6 +50,8 @@ namespace Project1
                 //Map the Controller route
                 endpoints.MapDefaultControllerRoute();
             });
+
+            SeedData.EnsurePopulated(app);
         }
     }
 }
