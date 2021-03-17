@@ -388,7 +388,7 @@ namespace Project1
                     }
                 );
 
-                //context.SaveChanges();
+                context.SaveChanges();
             }
         }
     }

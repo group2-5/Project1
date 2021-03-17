@@ -3,9 +3,12 @@
 
 @model FormInfo
 
-<form asp-action="Form_3" method="post">
+<p>@ViewBag.TimeInfo.Time</p>
+
+<form  method="post" asp-action="Form_3">
     <label asp-for="NameOfGroup">Name of Group</label>
     <input asp-for="NameOfGroup"/>
+    <input type="hidden" name="TimeID" value="@ViewBag.TimeInfo.TimeID" />
     <br />
     <label asp-for="SizeOfGroup">Size of Group</label>
     <input asp-for="SizeOfGroup"/>

@@ -23,20 +23,7 @@ namespace Project1.Models
 
         public string Phone { get; set; }
 
-        public TimeInfo TimeInfo { get; set; }
 
     }
-
-    public class TimeInfo
-    {
-        [Key]
-        public int TimeID { get; set; }
-        [Required]
-        public DateTime Time { get; set; }
-
-        public int TourId { get; set; }
-        public FormInfo FormInfo { get; set; }
-    }
-
 
 }

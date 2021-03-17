@@ -1,41 +1,17 @@
-﻿@model IEnumerable<FormInfo>
+﻿@model List<string>
 
-<br />
 
-<div class="row m-2">
+<div class="text-center">
+    <h1 class="display-4">Appointments</h1>
 
-    <div class="col-3">
-        
-
-        <h3>Scheduled Appointments</h3>
-
-        <br />
-
-        <p>To the right you'll find the appointments scheduled through our website. If there are any questions or conflicts, reach out using
-        the contact methods listed.</p>
-    </div>
-
-    <div class="col-9">
-        <!--Create a table to iterate through the scheduled appointments-->
-        <table class="table table-bordered">
-            <!--Table Headers-->
-            <thead class="thead-light">
-                <tr><th>Group Name</th><th>Group Size</th><th>Date/Time</th><th>Email</th><th>Phone #</th></tr>
-            </thead>
-            <tbody>
-                <!--Gets every instance within the List-->
-                @foreach (var x in Model)
-                {
-                <tr>
-                    <td>@x.NameOfGroup</td>
-                    <td>@x.SizeOfGroup</td>
-                    <td>@x.Email</td>
-                    <td>@x.Phone</td>
-                    @*<td>@x.TimeInfo.Time</td>*@
-                </tr>
-                }
-            </tbody>
-        </table>
-    </div>
 </div>
-<br />
+
+<div>
+    <!--This is where we pull in the model we reference above. We simply iterate through each string in the list and print it into the list-->
+    @foreach (var a in Model)
+    {
+        <ul class="list-group w-50 mx-auto">
+            <li class="list-group-item text-center">@a</li>
+        </ul>
+    }
+</div>

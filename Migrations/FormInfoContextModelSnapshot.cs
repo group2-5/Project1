@@ -50,24 +50,12 @@ namespace Project1.Migrations
                     b.Property<DateTime>("Time")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("TourId")
+                    b.Property<int?>("TourId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TimeID");
 
-                    b.HasIndex("TourId")
-                        .IsUnique();
-
                     b.ToTable("Times");
-                });
-
-            modelBuilder.Entity("Project1.Models.TimeInfo", b =>
-                {
-                    b.HasOne("Project1.Models.FormInfo", "FormInfo")
-                        .WithOne("TimeInfo")
-                        .HasForeignKey("Project1.Models.TimeInfo", "TourId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

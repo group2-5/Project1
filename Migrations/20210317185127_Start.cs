@@ -30,33 +30,21 @@ namespace Project1.Migrations
                     TimeID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Time = table.Column<DateTime>(nullable: false),
-                    TourId = table.Column<int>(nullable: false)
+                    TourId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Times", x => x.TimeID);
-                    table.ForeignKey(
-                        name: "FK_Times_Forms_TourId",
-                        column: x => x.TourId,
-                        principalTable: "Forms",
-                        principalColumn: "TourId",
-                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Times_TourId",
-                table: "Times",
-                column: "TourId",
-                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Times");
+                name: "Forms");
 
             migrationBuilder.DropTable(
-                name: "Forms");
+                name: "Times");
         }
     }
 }

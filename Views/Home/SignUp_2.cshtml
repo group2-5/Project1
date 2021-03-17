@@ -1,7 +1,29 @@
-﻿<p>This page will have all available time slots. For now, just select the button to go to the form page.</p>
+﻿@model IEnumerable<TimeInfo>
+
+<p>This page will have all available time slots. For now, just select the button to go to the form page.</p>
+
+<table class="table table-dark">
+    <tr>
+        <th>Date</th>
+        <th></th>
+    </tr>
+
+    @foreach (TimeInfo time in Model)
+    {
+        <tr>
+            <td><p>@time.Time</p></td>
+            <td>
+                <form method="post" asp-action="SignUp_2">
+                    <input type="hidden" name="timeID" value="@time.TimeID" />
+                    <button type="submit" class="btn-success btn-small">Schedule Appointment</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
 
 
-<h3>Monday</h3>
+@*<h3>Monday</h3>
 <div class="container">
     <div class="row">
         <div class="col-sm">
@@ -473,4 +495,4 @@
         </div>
     </div>
 </div>
-<br />
+<br />*@
