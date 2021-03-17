@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<!--Set up a shared layout that can be used for all of our views. Breakpoints will be used thoughout to make it look nice-->
+<!DOCTYPE html>
 
 <html>
 
+<!--Set up a head portion that brings in bootstrap-->
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Layton Temple Tours</title>
@@ -9,25 +11,29 @@
 </head>
 
 <body>
+    <!--header class for title at top of views-->
     <header class="text-center bg-secondary text-white">
         <h2 class="display-4 text-uppercase">Layton Utah Temple Tours</h2>
     </header>
+    <!--Simple navigation bar-->
     <nav class="navbar navbar-light bg-light justify-content-center">
         <a asp-action="Index" class="navbar-brand">Home</a>
         <a asp-action="SignUp_2" class="navbar-brand">Sign-Up</a>
         <a asp-action="Display_4" class="navbar-brand">Appointments</a>
     </nav>
-
+    <!--Render the Body-->
     <div>
         @RenderBody()
     </div>
     <br />
-    <hr />
+    <!--Simple footer-->
     <footer class="text-center bg-secondary text-white p-4">Section 2 Group 5</footer>
     <br />
+    <!--import jquery and javascript bootstrap in that order-->
     <script src="~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--Scripts not required-->
     @RenderSection("Scripts", required: false)
 </body>
 
